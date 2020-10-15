@@ -10,6 +10,11 @@ public enum TipoPersonagem {
 	TipoPersonagem(int opcao) {
 		this.opcao = opcao;
 	}
+	
+	TipoPersonagem(){
+		
+	}
+	
 
 	public int getOpcao() {
 		return this.opcao;

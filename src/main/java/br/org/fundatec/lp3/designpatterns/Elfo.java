@@ -3,10 +3,13 @@ package br.org.fundatec.lp3.designpatterns;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sun.xml.internal.ws.client.sei.ValueSetter;
+
 public class Elfo extends Personagem {
 
 	public Elfo() {
-
+		
+		
 		armasDisponiveis = new ArrayList<>();
 		armasDisponiveis.add(TipoArma.ARCOEFLECHA);
 		armasDisponiveis.add(TipoArma.PUNHAL);
@@ -24,5 +27,8 @@ public class Elfo extends Personagem {
 	public List<TipoArma> tiposDeArmaDisponiveis() {
 		return armasDisponiveis;
 	}
+
+	
+	
 
 }

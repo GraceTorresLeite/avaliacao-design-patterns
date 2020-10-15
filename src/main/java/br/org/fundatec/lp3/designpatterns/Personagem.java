@@ -2,6 +2,7 @@ package br.org.fundatec.lp3.designpatterns;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import br.org.fundatec.lp3.designpatterns.arma.Arma;
 
@@ -43,11 +44,13 @@ public abstract class Personagem {
 	}
 
 	public int atacar(Personagem personagem) {
-
+	
 		if (ultimaArmaUsada == null || ultimaArmaUsada.equals(primeiraArma)) {
+			personagem.getTipoPersonagem();
 			personagem.sofrerDano(segundaArma.getDano());
 			ultimaArmaUsada = segundaArma;
 		} else {
+			personagem.getTipoPersonagem();
 			personagem.sofrerDano(primeiraArma.getDano());
 			ultimaArmaUsada = primeiraArma;
 		}
@@ -61,7 +64,7 @@ public abstract class Personagem {
 	}
 
 	public void sofrerDano(int dano) {
-
+	
 		if (dano > vida) {
 			vida = 0;
 		} else {
@@ -76,5 +79,7 @@ public abstract class Personagem {
 		return String.format(msg, getTipoPersonagem().name(), getPrimeiraArma().toString(),
 				getSegundaArma().toString());
 	}
+	
+	
 
 }

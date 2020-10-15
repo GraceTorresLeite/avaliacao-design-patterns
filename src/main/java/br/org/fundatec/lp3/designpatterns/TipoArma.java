@@ -26,25 +26,19 @@ public enum TipoArma {
 	}
 
 	public static TipoArma buscaPorOpcao(int opcao) {
-
-		TipoArma[] todosOsTipos = TipoArma.values();
-		for (int i = 0; i < todosOsTipos.length; i++) {
-
-			TipoArma tipoArma = todosOsTipos[i];
-
+		
+		for (TipoArma tipoArma : values()) {
 			if (tipoArma.getOpcao() == opcao) {
 				return tipoArma;
 			}
-
 		}
-
 		return null;
 
 	}
 
 	@Override
 	public String toString() {
-		return titulo;
+		return opcao + " " + titulo;
 	}
 
 }
