@@ -50,7 +50,7 @@ public abstract class Personagem {
 			personagem.sofrerDano(segundaArma.getDano());
 			ultimaArmaUsada = segundaArma;
 		} else {
-			personagem.getTipoPersonagem();
+			personagem.getTipoPersonagem(); 
 			personagem.sofrerDano(primeiraArma.getDano());
 			ultimaArmaUsada = primeiraArma;
 		}

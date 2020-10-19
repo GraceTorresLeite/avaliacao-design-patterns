@@ -86,18 +86,20 @@ public class App {
 		} else {
 			return null;
 		}
-
-		System.out.println("> Primeira Arma: " + personagem.tiposDeArmaDisponiveis());
+		
+		System.out.println("> Primeira Arma: " + personagem.armasDisponiveis);
 		
 		MontaPrimeiraArma primeiraArma = new MontaPrimeiraArma();
 		int opcaoArma; 
-		primeiraArma.montaArma(personagem, opcaoArma = scanner.nextInt());
+		primeiraArma.primeiraArma(personagem, opcaoArma = scanner.nextInt());
+		//primeiraArma.montaArma(personagem, opcaoArma = scanner.nextInt());
 	
 		
 
-		System.out.println("> Segunda Arma: " + personagem.tiposDeArmaDisponiveis());
+		System.out.println("> Segunda Arma: " + personagem.armasDisponiveis);
 		MontaSegundaArma segundaArma = new MontaSegundaArma();
-		segundaArma.montaArma(personagem, opcaoArma = scanner.nextInt());
+		segundaArma.segundaArma(personagem, opcaoArma = scanner.nextInt());
+		//segundaArma.montaArma(personagem, opcaoArma = scanner.nextInt());
 		
 		return personagem;
 		
