@@ -1,23 +1,21 @@
 package br.org.fundatec.lp3.designpatterns;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import com.sun.xml.internal.ws.client.sei.ValueSetter;
 
 public class Elfo extends Personagem {
 
-	public Elfo() {
+	@Override
+	protected void inicializaPersonagem() {
 		
-		
-		armasDisponiveis = new ArrayList<>();
 		armasDisponiveis.add(TipoArma.ARCOEFLECHA);
 		armasDisponiveis.add(TipoArma.PUNHAL);
 		armasDisponiveis.add(TipoArma.PUNHALDUPLO);
 		armasDisponiveis.add(TipoArma.ESPADA);
-
+		
+		armaFactory = new ArmaElfoFactory();
+		
 	}
-
+	
 	@Override
 	public TipoPersonagem getTipoPersonagem() {
 		return TipoPersonagem.ELFO;
@@ -27,8 +25,5 @@ public class Elfo extends Personagem {
 	public List<TipoArma> tiposDeArmaDisponiveis() {
 		return armasDisponiveis;
 	}
-
-	
-	
 
 }
